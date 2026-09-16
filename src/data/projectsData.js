@@ -122,6 +122,7 @@ export const PROJECTS = [
     subtitle: "ASSISTANT IA ANTI-GASPILLAGE & RECETTES MAROCAINES",
     summary: "Assistant culinaire intelligent et éco-responsable qui analyse les restes d'ingrédients disponibles dans le réfrigérateur pour concevoir des recettes marocaines savoureuses et économiques. Connecté via webhooks à des workflows n8n pour expédier automatiquement la liste d'achats sur Gmail et suivre l'impact écologique sur Google Sheets.",
     tags: ["BOTPRESS CLOUD", "N8N", "JAVASCRIPT", "WEBHOOKS", "API GMAIL", "FEW-SHOT PROMPTING", "PROMPT ENGINEERING"],
+    image: "/projects/wajba.png",
     githubUrl: "https://github.com/rim-coder/wajba-chatbot",
     videoUrl: "https://drive.google.com/file/d/1QsxtIByhFEgVuJ-xcimMpv934Q8cnjMU/view?usp=sharing",
     highlights: [

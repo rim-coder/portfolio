@@ -4,8 +4,19 @@ import GithubIcon from './GithubIcon';
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="p-8 sm:p-10 rounded-3xl bg-[#13131A]/90 border border-[#20202C] hover:border-[#C89B94]/50 transition-all duration-300 hover:shadow-2xl hover:shadow-[#C89B94]/5 flex flex-col justify-between">
+    <div className="p-6 sm:p-9 rounded-3xl bg-[#13131A]/90 border border-[#20202C] hover:border-[#C89B94]/50 transition-all duration-300 hover:shadow-2xl hover:shadow-[#C89B94]/5 flex flex-col justify-between group">
       <div>
+        {/* Project Visual Image (if present) */}
+        {project.image && (
+          <div className="mb-7 rounded-2xl overflow-hidden border border-[#262638] bg-[#0E0E14] shadow-lg group-hover:border-[#C89B94]/40 transition-all duration-500">
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-auto max-h-[360px] object-cover object-top filter brightness-[95%] group-hover:brightness-100 group-hover:scale-[1.02] transition-all duration-500"
+            />
+          </div>
+        )}
+
         {/* Subtitle tag */}
         <p className="text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase text-[#D4A396] mb-2">
           {project.subtitle}
