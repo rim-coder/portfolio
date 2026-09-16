@@ -138,6 +138,7 @@ export const PROJECTS = [
     subtitle: "SYSTÈME DÉCISIONNEL & REPORTING (PFE ARTISANAT)",
     summary: "Système complet de pilotage et de suivi des indicateurs de performance stratégiques (KPIs) pour le Secrétariat d'État chargé de l'Artisanat. Comprend des tableaux de bord dynamiques d'atterrissage prévisionnel vs réalisation, un système granulaire de gestion des droits RBAC, et la génération instantanée de rapports PDF et tableurs Excel.",
     tags: ["REACT", "NODE.JS", "EXPRESS", "POSTGRESQL", "RECHARTS", "2FA OTP", "RBAC", "BUSINESS INTELLIGENCE"],
+    image: "/projects/plateforme-pilotage.png",
     githubUrl: "https://github.com/rim-coder/plateforme-de-pilotage",
     highlights: [
       "Tableaux de bord dynamiques avec graphiques Recharts (atterrissage prévisionnel vs réalisation)",
