@@ -1,97 +1,75 @@
 ﻿import React from 'react';
-import { GraduationCap, BookOpen, Award } from 'lucide-react';
+import { EDUCATION } from '../data/projectsData';
+import { GraduationCap, Calendar, MapPin, BookOpen } from 'lucide-react';
 
 export default function EducationSection() {
-  const s5Modules = [
-    "Systèmes de Gestion de Bases de Données Avancés",
-    "Algorithmes et Structures de Données Avancés",
-    "Programmation Web Avancée",
-    "Programmation Orientée Objets",
-    "Apprentissage Automatique (Machine Learning)",
-    "Génie Logiciel et Modélisation",
-    "Anglais Technique"
-  ];
-
-  const s6Modules = [
-    "Agents Intelligents & Systèmes Autonomes",
-    "Intelligence Artificielle",
-    "Big Data et Technologie Cloud",
-    "Ateliers Pratiques (Business Intelligence / Intelligence des Affaires)",
-    "Projet de Fin d'Études (Plateforme de Pilotage Stratégique)"
-  ];
-
   return (
-    <section id="formation" className="py-20 text-white border-t border-slate-800/80">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
-            <GraduationCap size={15} />
-            <span>Cursus Universitaire</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 mb-3">
-            Formation Académique
-          </h2>
-          <p className="text-sm text-slate-400">
-            Licence Sciences et Techniques — Ingénierie Informatique (LST2I)
-          </p>
-        </div>
+    <section id="parcours" className="py-24 border-t border-[#181822] relative">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8">
+        {/* Label */}
+        <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#C89B94] mb-4">
+          FORMATION & DIPLÔMES
+        </p>
 
-        {/* Institution card */}
-        <div className="p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-xl mb-10">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
-            <div>
-              <div className="flex items-center gap-2 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-1">
-                <Award size={15} />
-                <span>Diplôme Universitaire</span>
+        {/* Headline */}
+        <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-[#F7F5F2] tracking-tight leading-[1.25] mb-14 font-normal">
+          Mon <span className="italic text-[#D4A396] font-serif-luxury font-normal">parcours universitaire</span>
+        </h2>
+
+        {/* Education Stack */}
+        <div className="space-y-8">
+          {EDUCATION.map((edu, idx) => (
+            <div
+              key={idx}
+              className="p-7 sm:p-9 rounded-3xl bg-[#13131A]/90 border border-[#20202C] hover:border-[#C89B94]/40 transition-all duration-300"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-3">
+                <div>
+                  <h3 className="font-serif-luxury text-xl sm:text-2xl text-[#F5F2EC] font-medium">
+                    {edu.diploma}
+                  </h3>
+                  <p className="text-sm font-light text-[#D4A396] mt-0.5">
+                    {edu.institution}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3 text-[11px] text-[#7E7972] font-mono shrink-0">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar size={13} className="text-[#C89B94]" />
+                    {edu.period}
+                  </span>
+                  <span className="hidden sm:inline">•</span>
+                  <span className="flex items-center gap-1.5">
+                    <MapPin size={13} className="text-[#7E7972]" />
+                    {edu.location}
+                  </span>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-100">
-                Licence en Sciences et Techniques : Ingénierie Informatique (LST2I)
-              </h3>
-              <p className="text-sm text-slate-300 mt-1">
-                Faculté des Sciences et Techniques de Mohammedia (FST) — Université Hassan II de Casablanca
+
+              <p className="text-xs sm:text-sm text-[#A8A39B] font-light leading-relaxed mb-4">
+                {edu.description}
               </p>
-            </div>
-            <span className="self-start md:self-auto px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-300 text-xs font-semibold border border-emerald-500/20">
-              Promotion Diplômée
-            </span>
-          </div>
 
-          <p className="text-xs text-slate-400 leading-relaxed pt-6">
-            Programme axé sur les compétences les plus recherchées dans les métiers du numérique : programmation avancée, conception logicielle, gestion approfondie des données, intelligence artificielle, agents autonomes et technologies décisionnelles.
-          </p>
-        </div>
-
-        {/* Semesters grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm mb-4 pb-3 border-b border-slate-800">
-              <BookOpen size={16} />
-              <span>Semestre 5 : Fondations Avancées & Génie Logiciel</span>
+              {edu.modules && (
+                <div className="pt-4 border-t border-[#1D1D28]">
+                  <p className="text-[10px] tracking-[0.18em] uppercase text-[#7E7972] font-semibold mb-2.5 flex items-center gap-1.5">
+                    <BookOpen size={12} className="text-[#C89B94]" />
+                    Modules clés & spécialités :
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {edu.modules.map((m, mIdx) => (
+                      <span
+                        key={mIdx}
+                        className="text-[10px] tracking-[0.08em] px-2.5 py-1 rounded-lg bg-[#181824] text-[#C4BFB8] border border-[#252534]"
+                      >
+                        {m}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-            <ul className="space-y-2 text-xs text-slate-300">
-              {s5Modules.map((m, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0 mt-1.5" />
-                  <span>{m}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
-            <div className="flex items-center gap-2 text-teal-400 font-bold text-sm mb-4 pb-3 border-b border-slate-800">
-              <BookOpen size={16} />
-              <span>Semestre 6 : IA, Agents, Big Data & Ateliers BI</span>
-            </div>
-            <ul className="space-y-2 text-xs text-slate-300">
-              {s6Modules.map((m, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0 mt-1.5" />
-                  <span>{m}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
       </div>
     </section>

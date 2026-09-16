@@ -1,11 +1,63 @@
 ﻿@import "tailwindcss";
 
 @layer base {
+  :root {
+    --bg-main: #0B0B0E;
+    --card-bg: #13131A;
+    --card-hover: #181822;
+    --rose-gold: #C89B94;
+    --rose-gold-light: #E5B8AE;
+    --rose-gold-muted: rgba(200, 155, 148, 0.15);
+  }
+
   html {
     scroll-behavior: smooth;
+    background-color: #0B0B0E;
+    color: #EAE6E1;
   }
+
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0B0B0E;
+    overflow-x: hidden;
   }
+
+  ::selection {
+    background-color: #C89B94;
+    color: #0B0B0E;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom delicate glow animations */
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.05); }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 8s ease-in-out infinite;
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #252530;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C89B94;
 }

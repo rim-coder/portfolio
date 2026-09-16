@@ -1,20 +1,24 @@
 ﻿import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ProjectsSection from './components/ProjectsSection';
-import SkillsSection from './components/SkillsSection';
+import AboutSection from './components/AboutSection';
+import ExperienceSection from './components/ExperienceSection';
 import EducationSection from './components/EducationSection';
+import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500 selection:text-slate-950 font-sans">
+    <div className="min-h-screen bg-[#0B0B0E] text-[#EAE6E1] font-sans-clean selection:bg-[#C89B94] selection:text-[#0B0B0E]">
       <Navbar />
       <main>
         <Hero />
-        <ProjectsSection />
-        <SkillsSection />
+        <AboutSection />
+        <ExperienceSection />
         <EducationSection />
+        <SkillsSection />
+        <ProjectsSection />
       </main>
       <Footer />
     </div>

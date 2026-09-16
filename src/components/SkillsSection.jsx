@@ -1,43 +1,64 @@
 ﻿import React from 'react';
-import { SKILL_GROUPS } from '../data/projectsData';
-import { Cpu, Check } from 'lucide-react';
+import { EXPERTISE_DOMAINS } from '../data/projectsData';
+import { Code2, Bot, Database } from 'lucide-react';
 
 export default function SkillsSection() {
-  return (
-    <section id="competences" className="py-20 text-white bg-slate-950/60 border-t border-slate-800/80">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
-            <Cpu size={14} />
-            <span>Savoir-faire Technique</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 mb-3">
-            Compétences & Technologies
-          </h2>
-          <p className="text-sm text-slate-400">
-            Une combinaison de compétences en génie logiciel, développement web moderne, intelligence artificielle et pilotage de données.
-          </p>
-        </div>
+  const getIcon = (id) => {
+    switch (id) {
+      case 'fullstack':
+        return <Code2 size={20} className="text-[#E5B8AE]" />;
+      case 'ai':
+        return <Bot size={20} className="text-[#E5B8AE]" />;
+      case 'bi':
+        return <Database size={20} className="text-[#E5B8AE]" />;
+      default:
+        return <Code2 size={20} className="text-[#E5B8AE]" />;
+    }
+  };
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SKILL_GROUPS.map((group, index) => (
+  return (
+    <section id="expertise" className="py-24 border-t border-[#181822] relative">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8">
+        {/* Label */}
+        <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#C89B94] mb-4">
+          EXPERTISE
+        </p>
+
+        {/* Headline */}
+        <h2 className="font-serif-luxury text-3xl sm:text-4xl md:text-5xl text-[#F7F5F2] tracking-tight leading-[1.25] mb-14 font-normal">
+          Ce que je <span className="italic text-[#D4A396] font-serif-luxury font-normal">maîtrise</span>
+        </h2>
+
+        {/* Domain Cards */}
+        <div className="space-y-6">
+          {EXPERTISE_DOMAINS.map((domain, idx) => (
             <div
-              key={index}
-              className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 transition-all flex flex-col justify-between"
+              key={idx}
+              className="p-8 sm:p-9 rounded-3xl bg-[#13131A]/90 border border-[#20202C] hover:border-[#C89B94]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#C89B94]/5"
             >
-              <div>
-                <h3 className="text-sm font-bold text-slate-200 mb-4 pb-3 border-b border-slate-800 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                  {group.title}
-                </h3>
-                <ul className="space-y-2.5">
-                  {group.skills.map((skill, sIdx) => (
-                    <li key={sIdx} className="flex items-center gap-2 text-xs text-slate-300">
-                      <Check size={13} className="text-emerald-400 shrink-0" />
-                      <span>{skill}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Icon badge */}
+              <div className="w-12 h-12 rounded-2xl bg-[#231A21] border border-[#3E2935] flex items-center justify-center mb-6 shadow-inner">
+                {getIcon(domain.id)}
+              </div>
+
+              {/* Title & Description */}
+              <h3 className="font-serif-luxury text-2xl text-[#F7F5F2] font-medium mb-3">
+                {domain.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-[#A8A39B] font-light leading-relaxed mb-6 max-w-2xl">
+                {domain.description}
+              </p>
+
+              {/* Tags grid */}
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-[#1D1D28]">
+                {domain.tags.map((tag, tIdx) => (
+                  <span
+                    key={tIdx}
+                    className="text-[10px] tracking-[0.15em] font-medium px-3.5 py-1.5 rounded-full bg-[#181824] text-[#C4BFB8] border border-[#282838] hover:border-[#C89B94]/50 hover:text-[#E5B8AE] transition-colors"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
           ))}

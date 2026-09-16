@@ -1,91 +1,71 @@
 ﻿import React from 'react';
-import { Mail, ArrowDown, Bot, Database, Code2, GraduationCap, MapPin } from 'lucide-react';
-import GithubIcon from './GithubIcon';
+import { ArrowUpRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/projectsData';
 
 export default function Hero() {
   return (
-    <section className="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden text-white">
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-emerald-500/10 rounded-full blur-3xl -z-10 pointer-events-none" />
-      <div className="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[250px] bg-teal-500/10 rounded-full blur-3xl -z-10 pointer-events-none" />
+    <section className="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden text-center">
+      {/* Delicate ambient rose glow behind portrait */}
+      <div className="absolute top-28 left-1/2 -translate-x-1/2 w-[340px] h-[340px] bg-[#C89B94]/12 rounded-full blur-3xl pointer-events-none -z-10 animate-subtle-pulse" />
+      <div className="absolute top-48 left-1/2 -translate-x-1/2 w-[520px] h-[400px] bg-[#634842]/10 rounded-full blur-[100px] pointer-events-none -z-10" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold mb-6 animate-pulse">
-          <GraduationCap size={15} />
-          <span>FST Mohammedia • Ingénierie Informatique (LST2I)</span>
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 flex flex-col items-center">
+        {/* Profile portrait with refined circular frame */}
+        <div className="relative mb-10 group">
+          <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden p-1 bg-gradient-to-b from-[#D4A396]/60 via-[#1A1A24] to-transparent shadow-2xl shadow-[#C89B94]/10">
+            <img
+              src="/photo.jpg"
+              alt={PERSONAL_INFO.name}
+              className="w-full h-full object-cover rounded-full filter grayscale-[10%] group-hover:grayscale-0 transition-all duration-500 scale-105"
+            />
+          </div>
         </div>
 
-        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-100 max-w-4xl mx-auto leading-tight sm:leading-tight mb-6">
-          Développeuse <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Full Stack</span> & <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-400">IA / Automatisation</span>
-        </h1>
-
-        <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8">
-          {PERSONAL_INFO.bio}
+        {/* Small subtitle badge */}
+        <p className="text-[11px] sm:text-xs tracking-[0.25em] font-medium text-[#C89B94] uppercase mb-4">
+          {PERSONAL_INFO.badgeTitle}
         </p>
 
-        <div className="flex items-center justify-center gap-1.5 text-xs text-slate-400 mb-8">
-          <MapPin size={14} className="text-emerald-400" />
-          <span>{PERSONAL_INFO.location}</span>
-        </div>
+        {/* Main Name with Luxury Serif Typography */}
+        <h1 className="font-serif-luxury tracking-tight mb-6">
+          <span className="block text-4xl sm:text-6xl md:text-7xl font-semibold text-[#F7F5F2]">
+            {PERSONAL_INFO.firstName}
+          </span>
+          <span className="block text-4xl sm:text-6xl md:text-7xl font-normal italic text-[#D4A396] mt-1 font-serif-luxury">
+            {PERSONAL_INFO.lastName}
+          </span>
+        </h1>
 
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        {/* Bio tagline */}
+        <p className="text-sm sm:text-base text-[#B3AEA6] max-w-2xl mx-auto leading-relaxed font-light mb-10">
+          {PERSONAL_INFO.tagline}
+        </p>
+
+        {/* Action Pill Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-20">
           <a
-            href="#projets"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5 cursor-pointer"
+            href="#contact"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#C89B94] hover:bg-[#Dbb1ab] text-[#0B0B0E] font-semibold text-xs tracking-[0.15em] uppercase transition-all duration-300 shadow-lg shadow-[#C89B94]/20 hover:-translate-y-0.5"
           >
-            <span>Découvrir mes projets</span>
-            <ArrowDown size={16} />
+            <span>Me Contacter</span>
+            <ArrowUpRight size={15} />
           </a>
 
           <a
             href={PERSONAL_INFO.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 font-semibold text-sm transition-all hover:-translate-y-0.5 cursor-pointer"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#13131A] hover:bg-[#1C1C26] text-[#E5E0DA] border border-[#2B2B38] font-semibold text-xs tracking-[0.15em] uppercase transition-all duration-300 hover:border-[#C89B94]/40 hover:-translate-y-0.5"
           >
-            <GithubIcon size={17} />
-            <span>GitHub Profile</span>
-          </a>
-
-          <a
-            href={`mailto:${PERSONAL_INFO.email}`}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 text-slate-300 border border-slate-700/60 font-medium text-sm transition-all cursor-pointer"
-          >
-            <Mail size={16} />
-            <span>{PERSONAL_INFO.email}</span>
+            <span>GitHub</span>
+            <ArrowUpRight size={15} />
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 text-left">
-          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm">
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-3">
-              <Code2 size={20} />
-            </div>
-            <h3 className="text-sm font-bold text-slate-200 mb-1">Architecture Full Stack & BI</h3>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              React, Node.js, PostgreSQL, Recharts, API REST et modélisation de tableaux de bord décisionnels.
-            </p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm">
-            <div className="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center mb-3">
-              <Bot size={20} />
-            </div>
-            <h3 className="text-sm font-bold text-slate-200 mb-1">Agents IA & Automatisation</h3>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Botpress Cloud, flux autonomes n8n, intégrations d'API webhooks et techniques de Prompt Engineering.
-            </p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 backdrop-blur-sm">
-            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-3">
-              <Database size={20} />
-            </div>
-            <h3 className="text-sm font-bold text-slate-200 mb-1">Algorithmes & SGBD Avancés</h3>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Structures de données complexes, requêtes SQL optimisées, normalisation et intégrité relationnelle.
-            </p>
-          </div>
+        {/* Delicate scroll indicator */}
+        <div className="flex flex-col items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-[#736E67]">
+          <span>Scroll pour explorer</span>
+          <div className="w-[1px] h-10 bg-gradient-to-b from-[#C89B94]/60 to-transparent" />
         </div>
       </div>
     </section>
