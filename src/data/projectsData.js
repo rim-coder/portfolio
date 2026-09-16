@@ -151,6 +151,7 @@ export const PROJECTS = [
     subtitle: "APPLICATION WEB & BDD RELATIONNELLE AVANCÉE",
     summary: "Application web de gestion des établissements hôteliers, chambres et réservations clients. Repose sur une base de données relationnelle hautement normalisée avec contraintes d'intégrité, disponibilité en temps réel et requêtes préparées.",
     tags: ["PHP", "MYSQL", "ARCHITECTURE MVC", "SQL AVANCÉ", "CRUD SÉCURISÉ"],
+    githubUrl: "https://github.com/rim-coder/gestion-hoteliere",
     highlights: [
       "Modélisation relationnelle rigoureuse de la base de données hôtelière",
       "Gestion des réservations en temps réel, disponibilités et tarification",
@@ -163,6 +164,7 @@ export const PROJECTS = [
     subtitle: "FONDAMENTAUX & OPTIMISATION DE COMPLEXITÉ",
     summary: "Conception, implémentation et analyse de performance de structures de données arborescentes et dynamiques pour la résolution optimale de problèmes computationnels complexes.",
     tags: ["STRUCTURES DE DONNÉES", "ARBRES & GRAPHES", "ALGORITHMIQUE AVANCÉE", "COMPLEXITÉ O(N)", "OPTIMISATION"],
+    githubUrl: "https://github.com/rim-coder/structures-de-donnees-c",
     highlights: [
       "Implémentation d'arbres binaires de recherche, piles, files et graphes",
       "Étude rigoureuse de la complexité spatio-temporelle (notation Grand O)",
