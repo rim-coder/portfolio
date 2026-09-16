@@ -81,7 +81,6 @@ export const EDUCATION = [
     description: "Socle scientifique et algorithmique fondamental, acquisition d'une rigueur analytique en modélisation mathématique et programmation structurée.",
     modules: [
       "Structures de Données & Algorithmique C / C++",
-      "Programmation Orientée Objet",
       "Algèbre Linéaire, Analyse Mathématique & Statistiques",
       "Bases de Données Relationnelles & SQL"
     ]
@@ -163,11 +162,11 @@ export const PROJECTS = [
     title: "Algorithmes & Structures de Données Avancées",
     subtitle: "FONDAMENTAUX & OPTIMISATION DE COMPLEXITÉ",
     summary: "Conception, implémentation et analyse de performance de structures de données arborescentes et dynamiques pour la résolution optimale de problèmes computationnels complexes.",
-    tags: ["STRUCTURES DE DONNÉES", "ARBRES & GRAPHES", "ALGORITHMIQUE AVANCÉE", "POO", "COMPLEXITÉ O(N)"],
+    tags: ["STRUCTURES DE DONNÉES", "ARBRES & GRAPHES", "ALGORITHMIQUE AVANCÉE", "COMPLEXITÉ O(N)", "OPTIMISATION"],
     highlights: [
       "Implémentation d'arbres binaires de recherche, piles, files et graphes",
       "Étude rigoureuse de la complexité spatio-temporelle (notation Grand O)",
-      "Application des principes de programmation orientée objet et modularité"
+      "Conception modulaire et optimisation de la gestion mémoire"
     ]
   }
 ];
