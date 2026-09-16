@@ -149,10 +149,11 @@ export const PROJECTS = [
   },
   {
     id: "gestion-hotel",
-    title: "Système de Gestion Hôtelière",
+    title: "Hotelia — Système de Gestion Hôtelière",
     subtitle: "APPLICATION WEB & BDD RELATIONNELLE AVANCÉE",
     summary: "Application web de gestion des établissements hôteliers, chambres et réservations clients. Repose sur une base de données relationnelle hautement normalisée avec contraintes d'intégrité, disponibilité en temps réel et requêtes préparées.",
     tags: ["PHP", "MYSQL", "ARCHITECTURE MVC", "SQL AVANCÉ", "CRUD SÉCURISÉ"],
+    image: "/projects/hotelia.jpg",
     githubUrl: "https://github.com/rim-coder/gestion-hoteliere",
     highlights: [
       "Modélisation relationnelle rigoureuse de la base de données hôtelière",
