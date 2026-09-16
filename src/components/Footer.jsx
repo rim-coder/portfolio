@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Mail, Phone, ArrowUp, ArrowUpRight } from 'lucide-react';
 import GithubIcon from './GithubIcon';
 import { PERSONAL_INFO } from '../data/projectsData';
@@ -20,7 +20,7 @@ export default function Footer() {
         </h2>
 
         <p className="text-sm text-[#A8A39B] max-w-lg mx-auto font-light leading-relaxed mb-12">
-          À l'écoute d'opportunités stimulantes en tant qu'ingénieure informatique (CDI, Stage pré-embauche, Projets Full Stack, Data & IA).
+          À l'écoute d'opportunités stimulantes en tant que développeuse informatique (CDI, Stage pré-embauche, Projets Full Stack, Data & IA).
         </p>
 
         {/* Contact links pills */}
@@ -59,7 +59,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-10 border-t border-[#181822] text-[11px] text-[#6E6A63] font-light">
           <p>
-            © {new Date().getFullYear()} {PERSONAL_INFO.name} · Ingénierie Informatique (FST Mohammedia)
+            © {new Date().getFullYear()} {PERSONAL_INFO.name} · Licence en Ingénierie Informatique (FST Mohammedia)
           </p>
 
           <button

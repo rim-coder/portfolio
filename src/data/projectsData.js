@@ -1,8 +1,8 @@
-﻿export const PERSONAL_INFO = {
+export const PERSONAL_INFO = {
   name: "Rim BARRADAH",
   firstName: "Rim",
   lastName: "BARRADAH",
-  badgeTitle: "INGÉNIEURE INFORMATIQUE · CASABLANCA / MOHAMMEDIA, MAROC",
+  badgeTitle: "LICENCE EN INGÉNIERIE INFORMATIQUE (BAC+3) · CASABLANCA / MOHAMMEDIA, MAROC",
   tagline: "Experte en développement web Full Stack, conception de systèmes décisionnels et automatisation intelligente par agents IA & modèles ML.",
   photo: "/photo.jpg",
   email: "barradahrim@gmail.com",
@@ -13,17 +13,12 @@
 
 export const ABOUT_DATA = {
   tag: "À PROPOS",
-  headlineMain: "Ingénieure,",
+  headlineMain: "Développeuse,",
   headlineAccent: "rigoureuse,",
   headlineEnd: "construite pour concevoir & optimiser",
-  bioParagraph1: "Diplômée d'une Licence Sciences et Techniques en Ingénierie Informatique (LST2I) et d'un DEUST MIP (Mathématiques, Informatique et Physique) à la Faculté des Sciences et Techniques de Mohammedia (FSTM).",
+  bioParagraph1: "Diplômée d'une Licence Sciences et Techniques en Ingénierie Informatique (LST2I, Bac+3) et d'un DEUST MIP (Mathématiques, Informatique et Physique) à la Faculté des Sciences et Techniques de Mohammedia (FSTM).",
   bioParagraph2: "Mon parcours est guidé par une ambition claire : concevoir des solutions logicielles complètes et résilientes qui allient la robustesse du développement web Full Stack, la pertinence de la Business Intelligence (KPIs décisionnels) et l'agilité des agents d'intelligence artificielle (Botpress, workflows n8n).",
-  bioParagraph3: "Dotée d'un esprit analytique aiguisé et d'une grande aisance relationnelle forgée en milieu professionnel, j'accorde une importance majeure à l'expérience utilisateur, à la sécurité applicative et à la valeur métier générée par chaque ligne de code.",
-  stats: [
-    { value: "3+", label: "Années d'études & dev" },
-    { value: "6+", label: "Projets majeurs" },
-    { value: "2", label: "Expériences professionnelles" }
-  ]
+  bioParagraph3: "Dotée d'un esprit analytique aiguisé et d'une grande aisance relationnelle forgée en milieu professionnel, j'accorde une importance majeure à l'expérience utilisateur, à la sécurité applicative et à la valeur métier générée par chaque ligne de code."
 };
 
 export const EXPERIENCES = [

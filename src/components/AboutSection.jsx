@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ABOUT_DATA } from '../data/projectsData';
 
 export default function AboutSection() {
@@ -20,27 +20,10 @@ export default function AboutSection() {
         </h2>
 
         {/* Narrative text */}
-        <div className="space-y-5 text-sm sm:text-base text-[#A8A39B] leading-relaxed font-light mb-16 max-w-3xl">
+        <div className="space-y-5 text-sm sm:text-base text-[#A8A39B] leading-relaxed font-light max-w-3xl">
           <p>{ABOUT_DATA.bioParagraph1}</p>
           <p>{ABOUT_DATA.bioParagraph2}</p>
           <p>{ABOUT_DATA.bioParagraph3}</p>
-        </div>
-
-        {/* Stats cards in sleek dark pills/boxes */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {ABOUT_DATA.stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-[#13131A]/90 border border-[#20202C] hover:border-[#C89B94]/30 transition-all duration-300"
-            >
-              <span className="block font-serif-luxury text-3xl sm:text-4xl font-normal text-[#E5B8AE] mb-1">
-                {stat.value}
-              </span>
-              <span className="block text-[11px] tracking-[0.18em] uppercase text-[#7E7972] font-medium">
-                {stat.label}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </section>
